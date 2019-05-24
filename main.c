@@ -57,7 +57,7 @@ int main (void) {
 		if (cmd_is("exit")) {
 			break;			
 		} else if (cmd_is("ls")) {			
-			ls(".");
+			ls(cmd[1]);
 		} else {
 			printf("%s: command not found\n", input);
 		}
