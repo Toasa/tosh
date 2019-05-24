@@ -1,13 +1,18 @@
 #include "ls.h"
 
-int main (void) {
-	char input[256];
+char input[256];
+
+int cmd_is(char *cmd) {
+	return !strcmp(input, cmd);
+}
+
+int main (void) {	
 	while(1) {
 		printf(">> ");
 		scanf("%s", input);
-		if (strcmp(input, "exit") == 0) {
+		if (cmd_is("exit")) {
 			break;			
-		} else if (strcmp(input, "ls") == 0) {
+		} else if (cmd_is("ls")) {
 			ls(".");
 		} else {
 			printf("%s: command not found\n", input);
