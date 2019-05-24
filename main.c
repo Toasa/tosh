@@ -9,7 +9,7 @@ int main (void) {
 		if (strcmp(input, "exit") == 0) {
 			break;			
 		} else {
-			printf("%s\n", input);
+			printf("%s: command not found\n", input);
 		}
 	}
 }
