@@ -60,7 +60,7 @@ void ls(char *dname) {
 
     dir_ptr = opendir(dname);
     if (dir_ptr == NULL) {
-        printf("err\n");
+        printf("%s: cannot open\n", dname);
     } else {
 	    while ((direntp = readdir(dir_ptr)) != NULL) {
             if (!(strcmp(direntp->d_name, ".") && strcmp(direntp->d_name, "..")))
