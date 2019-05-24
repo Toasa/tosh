@@ -1,2 +1,2 @@
 run:
-	@gcc main.c -o main && ./main
+	@gcc main.c ls.c -o main && ./main
